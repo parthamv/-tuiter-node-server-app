@@ -35,7 +35,6 @@ newTuit.liked= false;
 newTuit.image="tesla.png";
 console.log(newTuit);
 tuits.push(newTuit);
-console.log(tuits);
 res.json(newTuit);
 }
 
