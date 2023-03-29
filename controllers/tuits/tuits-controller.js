@@ -25,12 +25,17 @@ const deleteTuit = (req, res) => {
 }
 const createTuit = (req, res) => {
 const newTuit=req.body;
+newTuit.userName="Tesla";
+newTuit.handle="tesla";
+newTuit.time="2h";
 newTuit._id= (new Date()).getTime() +'';
 newTuit.likes=0;
 newTuit.dislikes=0;
 newTuit.liked= false;
 newTuit.image="tesla.png";
+console.log(newTuit);
 tuits.push(newTuit);
+console.log(tuits);
 res.json(newTuit);
 }
 
