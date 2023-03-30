@@ -1,6 +1,7 @@
 import posts from "./tuits.js";
 let tuits = posts;
 const findTuits = (req, res) => {
+console.log("find",tuits);
    res.json(tuits);
 }
 
@@ -33,9 +34,10 @@ newTuit.likes=0;
 newTuit.dislikes=0;
 newTuit.liked= false;
 newTuit.image="tesla.png";
-console.log(newTuit);
 tuits.push(newTuit);
 res.json(newTuit);
+
+console.log(tuits);
 }
 
 export default (app) => {
